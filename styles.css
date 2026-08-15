@@ -1,0 +1,381 @@
+:root {
+  --ink: #222222;
+  --muted: #6d6d6d;
+  --soft: #8b8b8b;
+  --line: #e2e2e2;
+  --accent: #267cb9;
+  --background: #ffffff;
+  --max-width: 980px;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 8px 12px;
+  color: var(--background);
+  background: var(--ink);
+  font-size: 0.875rem;
+  transform: translateY(-160%);
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-shell {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 74px;
+  padding-block: 72px 48px;
+}
+
+.site-sidebar {
+  position: sticky;
+  top: 56px;
+  align-self: start;
+}
+
+.site-title {
+  display: inline-block;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.site-title::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 2px;
+  margin-top: 20px;
+  background: var(--accent);
+}
+
+.site-title:hover {
+  color: var(--ink);
+}
+
+.site-description {
+  margin: 24px 0 0;
+  color: #4b4b4b;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.site-institution {
+  margin: 16px 0 0;
+  color: var(--soft);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 34px;
+  font-size: 0.88rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav span {
+  font-size: 0.82em;
+}
+
+main {
+  min-width: 0;
+}
+
+.page-header {
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+.term {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h3 {
+  font-family: var(--serif);
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.35rem, 5vw, 3.7rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.page-intro {
+  max-width: 62ch;
+  margin-bottom: 0;
+  color: #4f4f4f;
+  font-size: 1.02rem;
+}
+
+.section-heading {
+  margin: 48px 0 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.talk-list {
+  margin-top: 6px;
+}
+
+.talk {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 30px;
+  padding-block: 32px 36px;
+  border-top: 1px solid var(--line);
+}
+
+.talk:first-child {
+  border-top: 0;
+}
+
+.talk-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--muted);
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.talk-date-month {
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.talk-date-day {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.talk-date-year {
+  margin-top: 5px;
+  color: var(--soft);
+  font-size: 0.75rem;
+}
+
+.talk-speaker {
+  margin-bottom: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.talk-speaker span {
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 400;
+}
+
+.talk-content h3 {
+  margin-bottom: 8px;
+  font-size: clamp(1.35rem, 2.7vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.3;
+}
+
+.talk-details {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.abstract h4 {
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.abstract p {
+  max-width: 68ch;
+  margin-bottom: 0;
+  color: #3e3e3e;
+}
+
+.talk-placeholder .talk-date-day {
+  font-size: 1.25rem;
+}
+
+.talk-placeholder .talk-speaker,
+.talk-placeholder h3,
+.talk-placeholder .abstract p {
+  color: var(--muted);
+}
+
+.about {
+  margin-top: 20px;
+  padding-top: 2px;
+  border-top: 1px solid var(--line);
+}
+
+.about p {
+  max-width: 68ch;
+  margin: 24px 0 0;
+  color: #454545;
+}
+
+.site-footer {
+  margin-top: 58px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  margin-bottom: 0;
+  color: var(--soft);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .site-shell {
+    grid-template-columns: 1fr;
+    gap: 54px;
+    padding-top: 44px;
+  }
+
+  .site-sidebar {
+    position: static;
+    max-width: 440px;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-shell {
+    width: min(calc(100% - 32px), var(--max-width));
+    gap: 44px;
+    padding-block: 34px 34px;
+  }
+
+  .page-header {
+    padding-bottom: 34px;
+  }
+
+  .talk {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-block: 28px 32px;
+  }
+
+  .talk-date {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 7px;
+  }
+
+  .talk-date-month {
+    margin-bottom: 0;
+  }
+
+  .talk-date-day {
+    font-size: 1.25rem;
+  }
+
+  .talk-date-year {
+    margin-top: 0;
+  }
+
+  .talk-speaker span {
+    display: block;
+    margin: 2px 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skip-link {
+    transition: none;
+  }
+}
