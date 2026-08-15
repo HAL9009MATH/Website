@@ -1,4 +1,4 @@
-# UCSC Geometry & Analysis Seminar
+# UCSC Geometry Seminar
 
 A simple static website for seminar announcements at UC Santa Cruz. It uses plain HTML and CSS, so there is no build step and no software dependency to maintain.
 
@@ -16,33 +16,30 @@ Then visit `http://localhost:8000`.
 
 Open `index.html`. Inside the `talk-list` section, there is a commented template beginning with `ADDING A TALK`.
 
-1. Copy the full `<article class="talk-card"> ... </article>` block out of the comment.
+1. Copy the full `<article class="talk"> ... </article>` block out of the comment.
 2. Paste it above the comment.
 3. Replace the date, speaker, institution, title, time, location, and abstract.
-4. Remove the placeholder card once the first real talk has been added.
+4. Remove the placeholder entry once the first real talk has been added.
 
 Each visible talk has this structure:
 
 ```html
-<article class="talk-card">
-  <div class="talk-date">
+<article class="talk">
+  <time class="talk-date" datetime="2026-10-07">
     <span class="talk-date-month">Oct</span>
-    <span class="talk-date-day">07</span>
+    <span class="talk-date-day">7</span>
     <span class="talk-date-year">2026</span>
-  </div>
+  </time>
 
   <div class="talk-content">
-    <header class="talk-header">
-      <p class="talk-speaker">Speaker Name</p>
-      <p class="talk-affiliation">Speaker Institution</p>
+    <header>
+      <p class="talk-speaker">
+        Speaker Name
+        <span>Speaker Institution</span>
+      </p>
       <h3>Talk title</h3>
+      <p class="talk-details">Wednesday, October 7 · 4:00–5:00 PM · Room name</p>
     </header>
-
-    <dl class="talk-meta">
-      <div><dt>Date</dt><dd>Wednesday, October 7, 2026</dd></div>
-      <div><dt>Time</dt><dd>4:00–5:00 PM</dd></div>
-      <div><dt>Location</dt><dd>Room name</dd></div>
-    </dl>
 
     <div class="abstract">
       <h4>Abstract</h4>
@@ -62,4 +59,4 @@ The default project-site address will be:
 
 ## Design
 
-The page uses UC Santa Cruz's primary blue (`#003c6c`) and gold (`#fdc700`) with a restrained academic layout. It is responsive, keyboard accessible, and does not load external fonts, scripts, analytics, or trackers.
+The page uses a quiet two-column layout inspired by a traditional academic personal site: a compact seminar introduction on the left and the schedule on the right. It has a white background, restrained typography, thin dividers, one muted link color, and no decorative hero, cards, shadows, external fonts, scripts, analytics, or trackers.
