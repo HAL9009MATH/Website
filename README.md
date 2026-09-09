@@ -1,4 +1,4 @@
-# UCSC Geometry Seminar
+# UCSC Geometry and Analysis Seminar
 
 A simple static website for seminar announcements at UC Santa Cruz. It uses plain HTML and CSS, so there is no build step and no software dependency to maintain.
 
@@ -38,7 +38,7 @@ Each visible talk has this structure:
         <span>Speaker Institution</span>
       </p>
       <h3>Talk title</h3>
-      <p class="talk-details">Wednesday, October 7 · 4:00–5:00 PM · Room name</p>
+      <p class="talk-details">Wednesday, October 7 · 4:00 PM · McHenry 4130</p>
     </header>
 
     <div class="abstract">
