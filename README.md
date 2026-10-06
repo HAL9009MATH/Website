@@ -1,6 +1,6 @@
 # UCSC Geometry and Analysis Seminar
 
-A simple static website for seminar announcements at UC Santa Cruz. It uses plain HTML and CSS, so there is no build step and no software dependency to maintain.
+A simple static website for seminar announcements at UC Santa Cruz. It uses plain HTML and CSS, with MathJax for mathematical notation. There is no build step or local software dependency to install.
 
 ## Preview locally
 
@@ -59,4 +59,4 @@ The default project-site address will be:
 
 ## Design
 
-The page uses a quiet two-column layout inspired by a traditional academic personal site: a compact seminar introduction on the left and the schedule on the right. It has a white background, restrained typography, thin dividers, one muted link color, and no decorative hero, cards, shadows, external fonts, scripts, analytics, or trackers.
+The page uses a quiet two-column layout inspired by a traditional academic personal site: a compact seminar introduction on the left and the schedule on the right. It has a white background, restrained typography, thin dividers, one muted link color, and no decorative hero, cards, shadows, analytics, or trackers. MathJax renders mathematical notation from inline LaTeX enclosed in `\(...\)`.
