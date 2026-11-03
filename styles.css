@@ -260,7 +260,8 @@ h1 {
   font-size: 0.86rem;
 }
 
-.abstract h4 {
+.abstract h4,
+.speaker-bio h4 {
   margin-bottom: 7px;
   color: var(--muted);
   font-size: 0.7rem;
@@ -269,10 +270,84 @@ h1 {
   text-transform: uppercase;
 }
 
-.abstract p {
+.abstract p,
+.speaker-bio p {
   max-width: 68ch;
   margin-bottom: 0;
   color: #3e3e3e;
+}
+
+.speaker-bio {
+  margin-top: 24px;
+}
+
+.abstract p + p {
+  margin-top: 16px;
+}
+
+.abstract-body {
+  position: relative;
+}
+
+.abstract-copy {
+  display: flow-root;
+}
+
+.abstract-body.is-collapsed {
+  max-height: var(--abstract-preview-height);
+  overflow: hidden;
+}
+
+.abstract-body.is-collapsed::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1.65em;
+  background: linear-gradient(transparent, var(--background));
+  pointer-events: none;
+}
+
+.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 32px;
+  margin-top: 8px;
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.abstract-toggle::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.abstract-toggle[aria-expanded="true"]::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.abstract-toggle:hover {
+  color: var(--ink);
+}
+
+.abstract-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+
+.abstract-toggle[hidden] {
+  display: none;
 }
 
 .talk-placeholder .talk-date-day {
@@ -377,5 +452,17 @@ h1 {
 
   .skip-link {
     transition: none;
+  }
+}
+
+@media print {
+  .abstract-body.is-collapsed {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .abstract-body.is-collapsed::after,
+  .abstract-toggle {
+    display: none;
   }
 }

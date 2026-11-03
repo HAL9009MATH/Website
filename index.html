@@ -10,7 +10,8 @@
   <meta property="og:type" content="website">
   <title>UCSC Geometry and Analysis Seminar</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261102-abstracts">
+  <script defer src="abstracts.js?v=20261102"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"></script>
 </head>
 <body>
@@ -39,8 +40,13 @@
       </header>
 
       <section id="schedule" aria-labelledby="schedule-heading">
-        <h2 class="section-heading" id="schedule-heading">Upcoming talks</h2>
+        <h2 class="section-heading" id="schedule-heading">Talks</h2>
 
+        <!-- Calendar update (2026-11-02): Max Su, Therese Landry, Adam Jacob,
+             Fabio Ricci, Matthias Wink, and Yusen Xia. Source: UCSC Math Events
+             https://calendar.google.com/calendar/ical/ucsc.edu_6f4fdeff6rrf9i41bp0ejm0fvo%40group.calendar.google.com/public/basic.ics
+             Event times are in America/Los_Angeles. Fabio's title and abstract
+             have not yet been announced in the calendar. -->
         <div class="talk-list">
           <article class="talk" id="jiayin-pan-2026-10-07">
             <time class="talk-date" datetime="2026-10-07">
@@ -79,13 +85,13 @@
                   Max Su
                   <span>University of California, Santa Cruz</span>
                 </p>
-                <h3>Title to be announced</h3>
+                <h3>Global existence of an initial boundary value problem in 2+1 dimensions for the Einstein equation via a Hamiltonian approach</h3>
                 <p class="talk-details">Wednesday, October 14 · 4:00 PM · McHenry 4130</p>
               </header>
 
               <div class="abstract">
                 <h4>Abstract</h4>
-                <p>To be announced.</p>
+                <p>The Einstein equation describes our universe elegantly. One fundamental aspect is to understand the dynamics of the solutions. In this talk, we use a finite dimensional Hamiltonian system to describe solutions to the initial boundary value problem (IBVP) for the Einstein equation in 2+1 dimensions with totally geodesic timelike boundary. By analyzing the flows in the Hamitonian system, we can prove the longtime existence of the IBVP. This work shows more possibilities of simplifying the analysis of the Einstein equation geometrically.</p>
               </div>
             </div>
           </article>
@@ -101,15 +107,20 @@
               <header>
                 <p class="talk-speaker">
                   <a href="https://mdkvalheim.github.io/">Matthew Kvalheim</a>
-                  <span>University of Maryland, Baltimore County</span>
+                  <span>University of Maryland</span>
                 </p>
-                <h3>Title to be announced</h3>
+                <h3>On the universality of linear dynamics</h3>
                 <p class="talk-details">Wednesday, October 21 · 4:00 PM · McHenry 4130</p>
               </header>
 
               <div class="abstract">
                 <h4>Abstract</h4>
-                <p>To be announced.</p>
+                <p>Which nonlinear dynamical systems can be embedded as invariant subsets of linear systems of greater dimension? This is a natural variant of a question posed by Tao regarding the universality of potential well dynamics, where the class of potential well systems is replaced by linear systems. It is also an important question for numerical algorithms associated with "applied Koopman operator theory" that seek to model the evolution of observations of an unknown nonlinear system by a linear system on the observation space. In this talk, I will first describe a generalization of Tao's universality problem following Cardona–Presas and González-Prieto–Miranda–Peralta-Salas. I will then specialize to the linear universality problem and present necessary and sufficient conditions for the existence of linearizing embeddings for a broad class of nonlinear systems. Along the way, I will also present various consequences and examples, including strong counterexamples to the oft-repeated claim that nonlinear systems with multiple isolated equilibria do not admit linearizing embeddings. Aspects of this talk are based on joint works with Philip Arathoon and with Eduardo D. Sontag.</p>
+              </div>
+
+              <div class="speaker-bio">
+                <h4>Short Bio</h4>
+                <p>Matthew D. Kvalheim is currently an Assistant Professor of Mathematics at the University of Maryland, Baltimore County. His research draws on differential topology and other geometric-topological methods to study nonlinear systems. In 2026 he received the Young Investigator Program Award from the Air Force Office of Scientific Research and the Early Career Faculty Excellence Award from UMBC. He is on the editorial board of Mathematics of Control, Signals, and Systems. Previously, he held postdoctoral appointments at the University of Pennsylvania and the University of Michigan, where he also obtained his Ph.D. and M.S. degrees.</p>
               </div>
             </div>
           </article>
@@ -127,8 +138,57 @@
                   <a href="https://thereselandry.com/">Therese Landry</a>
                   <span>University of California, Santa Barbara</span>
                 </p>
-                <h3>Title to be announced</h3>
+                <h3>Hack's Law, Erosion, and Optimal Transport: Developing Mathematical Models and Computational Methods</h3>
                 <p class="talk-details">Wednesday, October 28 · 4:00 PM · McHenry 4130</p>
+              </header>
+
+              <div class="abstract">
+                <h4>Abstract</h4>
+                <p>Hack's Law says that the length of the main river in a river basin scales with the area of the river basin to the power 0.58, thereby prompting speculation on whether there exist optimality principles governing natural processes like channel formation. Identification of such principles and their continued mathematical development could lead to the formulation of a theoretical framework which supports study not only of fluvial landscape evolution, but other geomorphological processes as well. Erosion is nature's process of “moving dirt.” In 1781, Monge initiated the theory of optimal transport with the question, “Given a pile of sand and a pit of equal volume, how can one optimally transport the sand into the pit?” Building on earlier work by Birnir, Merchant, Smith, Cattan, and Rowlett, we aim to extend optimal transport theory to develop mathematical models and computational methods for studying erosion.</p>
+                <p>Via optimal transport theory, we prove the existence of unique global weak solutions to equations describing the sediment flow in the evolution of fluvial land surfaces, with constant water depth. While an earlier existence theory result by Birnir and Landry demonstrates that the slopes, or gradients of the surface, are moved optimally, our current work proves that erosion does what Monge proposed: move sediment optimally from the mountainside to the river. This is joint work with Bjorn Birnir.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="talk" id="adam-jacob-2026-11-04">
+            <time class="talk-date" datetime="2026-11-04">
+              <span class="talk-date-month">Nov</span>
+              <span class="talk-date-day">4</span>
+              <span class="talk-date-year">2026</span>
+            </time>
+
+            <div class="talk-content">
+              <header>
+                <p class="talk-speaker">
+                  <a href="https://www.math.ucdavis.edu/~ajacob/">Adam Jacob</a>
+                  <span>University of California, Davis</span>
+                </p>
+                <h3>Convergence of a modified Harmonic map heat flow between spheres</h3>
+                <p class="talk-details">Wednesday, November 4 · 4:00 PM · McHenry 4130</p>
+              </header>
+
+              <div class="abstract">
+                <h4>Abstract</h4>
+                <p>In this talk I'll introduce a modification of the Harmonic map heat flow between 2-spheres, and show how one can achieve convergence with any initial energy. Joint with Longzhi Lin.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="talk" id="fabio-ricci-2026-11-18">
+            <time class="talk-date" datetime="2026-11-18">
+              <span class="talk-date-month">Nov</span>
+              <span class="talk-date-day">18</span>
+              <span class="talk-date-year">2026</span>
+            </time>
+
+            <div class="talk-content">
+              <header>
+                <p class="talk-speaker">
+                  <a href="https://hal9009math.github.io/">Fabio Ricci</a>
+                  <span>University of California, Santa Cruz</span>
+                </p>
+                <h3>Title to be announced</h3>
+                <p class="talk-details">Wednesday, November 18 · 4:00 PM · McHenry 4130</p>
               </header>
 
               <div class="abstract">
@@ -151,13 +211,13 @@
                   <a href="https://web.math.ucsb.edu/~wink/">Matthias Wink</a>
                   <span>University of California, Santa Barbara</span>
                 </p>
-                <h3>Title to be announced</h3>
-                <p class="talk-details">Friday, November 20 · 4:00 PM · McHenry 4130</p>
+                <h3>Vanishing theorems for Kaehler manifolds</h3>
+                <p class="talk-details">Friday, November 20 · 3:00 PM · McHenry 4130</p>
               </header>
 
               <div class="abstract">
                 <h4>Abstract</h4>
-                <p>To be announced.</p>
+                <p>A celebrated result of Mori and Sui-Yau says that manifolds with positive bisectional curvature are biholomorphic to complex projective space. In this talk we will introduce new curvature conditions that provide characterizations of cohomology complex projective spaces. More generally, we will discuss vanishing results for harmonic (p,q)-forms based on conditions on the Kaehler curvature operator or the Calabi curvature operator. This talk is based on several joint works, with K. Broder, X. Li, J. Nienhaus, P. Petersen, F. Ricci and J. Stanfield.</p>
               </div>
             </div>
           </article>
@@ -175,13 +235,15 @@
                   <a href="https://sites.google.com/view/yusenxia/homepage">Yusen Xia</a>
                   <span>University of California, Santa Barbara</span>
                 </p>
-                <h3>Title to be announced</h3>
+                <h3>Neumann eigenvalues and hot spots on geodesic triangles</h3>
                 <p class="talk-details">Wednesday, December 2 · 4:00 PM · McHenry 4130</p>
               </header>
 
               <div class="abstract">
                 <h4>Abstract</h4>
-                <p>To be announced.</p>
+                <p>How small can the first nonzero Neumann eigenvalue of a triangle be when its diameter is fixed? I will discuss a sharp answer for geodesic triangles in two-dimensional space forms, extending a Euclidean result of Laugesen and Siudeja. In the spherical case, we assume the diameter is at most \(\pi/2\), and new equality phenomena occur at the endpoint.</p>
+                <p>The proof combines eigenvalue comparison with properties of nodal sets, giving a unified treatment of positive, zero, and negative curvature. I will also discuss a hot-spots theorem for non-acute spherical triangles: apart from a special equality family, the maximum and minimum of the first nonconstant Neumann eigenfunction occur at the endpoints of the longest side.</p>
+                <p>This is joint work with Shoo Seto and Guofang Wei.</p>
               </div>
             </div>
           </article>
